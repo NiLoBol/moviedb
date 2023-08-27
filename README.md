@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# โปรเจค MovieDB 
+  เป็นโปรเจคดึงข้อมูลจาก api ของhttps://www.themoviedb.org/ มาสร้างเว็บแสดงข้อมูลและร้านค้าหนัง 
+## เริ่มต้น
+ดาวน์โหลดไฟล์ MovieDB และติดตั้ง
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### การติดตั้ง
+ติดตัง modules
+```bash
+npm i
+```
+ใช้งานด้วย
+```bash
+npm start
 
-## Available Scripts
+``` 
 
-In the project directory, you can run:
+### การใช้งานโปรเจค
+หน้าเว็บ
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/6671cde4-cea1-45be-b017-32c226f2c353)
+ในส่วนของ Navbar  
+ปุ่ม Home กดเพื่อกลับไปหน้าหลัก
+ปุ่ม ร้านค้ากดเพื่อดูของในรถเข็น
+ส่วนของ search ใช้เพื่อค้นหาหนังโดยการพิมพ์ลงไปและกดที่ ENTER หรือคลิกที่ไอคอนค้นหา 
+ปุ่ม create price ใช้เพื่อไปยังหน้าแก้ไขราคา โดยราคาแรกเริ่มจะถูกกำหนดที่ 100
+ในส่วนด้านล่างจะเป็น cardหนัง สามารถกดคลิกเพื่อไปดูข้อมูลของหนัง
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/13aea204-e8a7-44bd-bcbe-20da1904ca52)
 
-### `npm start`
+ในส่วนนี้จะเป็นข้อมูลของหนังและปุ่ม Add to Shop กดเพื่อให้หนังไปยังรถเข็นของเราโดยถ้ากดเรื่องเดิมซ้ำจะเป็นการเพิ่มจำนวนของหนัง
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/5f4c4156-a2a0-4b62-af58-07433cf20b67)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ในส่วนของหน้าค้นหาจะแสดงข้อมูลของหนังที่ตรงกับการค้นหา 
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/1eba7cc1-1d18-4526-a829-a6c541c752ea)
+หน้านี้จะเป็นหน้าสำหรับแก้ไขราคา
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/5a251470-9ca6-4861-baaf-c22af3bfe384)
+เมื่อกรอกข้อมูลและกดปุ่ม ok 0จะมีแจ้งเตื่อนมาหมายถึงข้อมูลได้รับการอัปเดตแล้ว ในตัวอย่างจะอัปเดตค่าของหนังสไปเดอร์แมน
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/925f562b-172c-4d56-baad-9ce6679b714b)
+โดยค่าไอดีจะอยู่ส่วนหลัง movie/ 
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/07118141-da29-469e-8224-4dfee9057941)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ตัวอย่างหน้าสไปเดอร์แมนที่ได้รับการอัปเดต
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/d1b07276-2213-465b-b898-d64b73e79159)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ในส่วนนี้จะแสดงส่วนของรถเข็น
+โดยจะมีรูป ชื่อหนัง ราคาหนัง จำนวนหนัง และมีไอคอนถังขยะ ใช้เพื่อลบข้อมูลหนังดังกล่าว ปุ่มbuy เพื่อไปหน้าจ่ายเงิน ปุ่ม clear เพื่อลบข้อมูลทั้งหมดในรถเข็น
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/29f1b0d2-c281-4d67-a969-2aa3b4659706)
+เมื่อกดbuy จะขึ้น QR code สำหรับชำระเงินและข้อมูล จำนวนสิ้นค้า ราคาสิ้นค้าและ ราคาหลังลด โดยจะมีเมื่อได้รับส่วนลดและถ้าไม่ได้รับส่วนลดจะเขียนว่า คุณไม่ได้ส่วนลด
+พร้อมเวลานับถอยหลัง 60วินาที
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/47b23c73-2246-496d-867a-b4093adc497e)
+เมื่อกดปุ่ม clear ข้อมูลจะหายไป
+![image](https://github.com/NiLoBol/moviedb/assets/82454830/b8433268-324c-49c4-9866-9e40a3f001b8)
 
-### `npm run build`
+เมื่อออกแล้วเข้าใหม่ข้อมูลจะยังอยู่เพราะถูกเก็บไว้ใน localStorage โดย shopdata คือตัวแปรที่เก็บข้อมูลของสิ้นค้าในรถเข็น userList คือการเก็บข้อมูลส่วนของ ราคาที่ได้รับการอัปเดต 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
