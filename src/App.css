@@ -1,0 +1,113 @@
+body{
+  background:url('https://cdn.wallpapersafari.com/15/55/iCQ7fb.jpg') !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  min-height: 100vh;
+}
+#root{
+  min-height: 100vh;
+}
+.h-100vh{
+  min-height: 100vh;
+}
+body {
+  font-family: "Josefin Sans", sans-serif !important;
+}
+.dropdown-toggle::after{
+  display: none !important;
+}
+.cardsetx {
+  background:no-repeat url('https://www.ambrotras.com/wp-content/uploads/2014/08/picture-bg.gif');
+  background-size: cover;
+  display: flex;
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+}
+
+.bgmovieid{
+  background:no-repeat url('https://www.ambrotras.com/wp-content/uploads/2014/08/picture-bg.gif');
+  background-size: cover;
+  height: 80vh;
+  overflow: hidden;
+}
+.mh-300{
+  max-height: 300px;
+}
+.fw700{
+  font-weight: 700 !important;
+}
+.card{
+  height: auto;
+}
+.bgn{
+  background: none!important;
+}
+.w150{
+  width: 150px !important;
+}
+.w500{
+  width: 500px !important;
+}
+
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  outline: 0;
+  box-shadow:none !important;
+}
+.iconNav{
+  left: -30px;
+  top: 8px;
+  cursor: pointer;
+}
+.cursor-p{
+  cursor: pointer;
+}
+.use-in-mobile{
+  display: none !important;
+}
+
+.w-200{
+  width: 350px;
+}
+.z-1500{
+  z-index: 1500!important;
+}
+.box{
+  display: block;
+  height: 100px;
+}
+.dropdown-menu[data-bs-popper] {
+  top: 100%;
+  left: -150px !important;
+  margin-top: var(--bs-dropdown-spacer);
+}
+.form-control2 {
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (max-width:500px) {
+  .dropdown-menu[data-bs-popper] {
+    left: -20vw !important;
+  }
+  .bgmovieid{
+    height: 200vh;
+    overflow: hidden;
+  }
+  .w500{
+    width: 300px !important;
+  }
+}
